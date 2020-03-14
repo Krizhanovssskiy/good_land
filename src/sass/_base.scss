@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  position: relative;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-black);
+  background-color: var(--color-primary-dark);
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bg-list_dot {
+  width: 20px; height: 20px;
+  background: url('../img/css_sprites.png') -498px -194px;
+}
+
+.bg-logo_name {
+  width: 270px; height: 103px;
+  background: url('../img/css_sprites.png') -10px -10px;
+}
+
+.bg-warning {
+  width: 70px; height: 70px;
+  background: url('../img/css_sprites.png') -498px -104px;
+}
+
+.bg-foot {
+  width: 74px; height: 74px;
+  background: url('../img/css_sprites.png') -300px -166px;
+}
+
+x
+.bg-lightning {
+  width: 74px; height: 74px;
+  background: url('../img/css_sprites.png') -394px -166px;
+}
+
+.bg-lock {
+  width: 74px; height: 74px;
+  background: url('../img/css_sprites.png') -498px -10px;
+}
+
+.bg-Calendula {
+  width: 178px; height: 136px;
+  background: url('../img/css_sprites.png') -10px -133px;
+}
+
+.bg-Chestnut {
+  width: 178px; height: 136px;
+  background: url('../img/css_sprites.png') -300px -10px;
+}
+
+.bg-Sea_buckthorn {
+  width: 178px; height: 136px;
+  background: url('../img/css_sprites.png') -10px -289px;
+}
+
+.bg-Sulphates {
+  width: 178px; height: 136px;
+  background: url('../img/css_sprites.png') -208px -289px;
+}
+
+
