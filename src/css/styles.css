@@ -1,8 +1,8 @@
 :root {
   --color-primary: #f0f0f0;
-  --color-logo: #4b69b0;
-  --color-primary-dark: #f0f0f0;
-  --color-secondary: #ffffff;
+  --color-logo-lening: #FFE361;
+  --color-logo-task: #76fa95;
+  --color-secondary: #78FA9C;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-black-1: #060606;
@@ -11,37 +11,41 @@
   --color-grey-0: #1b1b1b;
   --color-grey-dark: #c5c5c5;
   --color-grey-dark-0: #7e7a7f;
-  --color-purple-1: #59c1fb;
-  --color-purple-2: #2d59f5;
-  --color-gradient-video-top: rgba(53, 187, 229, 0.4288);
-  --color-reviews: #f8f9fa;
+  --color-transparent: transparent;
+  --line-gradient-welcome-1: linear-gradient(112.75deg,
+                                            rgba(0, 0, 0, 0.68) 36.09%,
+                                            rgba(0, 0, 0, 0) 81.39%);
+  --line-gradient-welcome-2: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   --spacing-06: 6px;
-  --spacing-08: 8px;
   --spacing-12: 1.2rem;
-  --spacing-18: 1.8rem;
   --spacing-24: 2.4rem;
-  --spacing-30: 3rem;
-  --spacing-36: 3.6rem;
-  --spacing-42: 4.2rem;
-  --spacing-48: 4.8rem;
-  --font-primary: 'Roboto', sans-serif; }
+  --text-size-21: 21px;
+  --font-primary: 'Oswald', sans-serif;
+  --font-secondari: 'Lato', sans-serif; }
 
 @font-face {
-  font-family: 'Roboto', sans-serif;
-  src: url("../font/Roboto-Regular.ttf"); }
+  font-family: Oswald;
+  src: url("../font/Oswald-Regular.ttf"); }
+
+@font-face {
+  font-family: Lato;
+  src: url("../font/Lato-Regular.ttf"); }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
   -webkit-text-size-adjust: none; }
 
@@ -50,63 +54,113 @@ body {
   font-family: var(--font-primary);
   font-weight: 400;
   line-height: 1.6;
-  color: var(--color-black);
-  background-color: var(--color-primary-dark); }
+  color: var(--color-white);
+  background-color: var(--color-white); }
 
 .container {
   max-width: 1170px;
   width: 100%;
+  height: 100%;
   margin: 0 auto; }
 
-.bg-list_dot {
-  width: 20px;
-  height: 20px;
-  background: url("../img/css_sprites.png") -498px -194px; }
+.titleLending {
+  width: 100%;
+  font-family: var(--font-primary);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 130%;
+  /* or 45px */
+  text-align: center;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-white); }
 
-.bg-logo_name {
-  width: 270px;
-  height: 103px;
-  background: url("../img/css_sprites.png") -10px -10px; }
+.Btn__comaIn {
+  padding: 25px 50px;
+  background: var(--color-transparent);
+  border: 1px solid var(--color-white);
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  cursor: pointer; }
 
-.bg-warning {
-  width: 70px;
-  height: 70px;
-  background: url("../img/css_sprites.png") -498px -104px; }
+.Welcome {
+  position: relative;
+  padding: 50px 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--line-gradient-welcome-1), var(--line-gradient-welcome-2), url("../img/image 38.png") no-repeat 50% 50%;
+  background-size: cover;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .Welcome .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+        -ms-flex-align: start;
+            align-items: start; }
+  .Welcome h2 {
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 130%;
+    /* or 73px */
+    letter-spacing: -0.01em;
+    text-transform: uppercase; }
+  .Welcome__guaranteesBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .Welcome__guaranteesBox p {
+      position: relative;
+      padding-left: 46px;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: 500;
+      font-size: var(--text-size-21);
+      line-height: 25px;
+      color: var(--color-white); }
+      .Welcome__guaranteesBox p:last-child {
+        margin-left: 70px; }
+      .Welcome__guaranteesBox p:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 23px;
+        height: 2px;
+        background: var(--color-white); }
 
-.bg-foot {
-  width: 74px;
-  height: 74px;
-  background: url("../img/css_sprites.png") -300px -166px; }
-
-x
-.bg-lightning {
-  width: 74px;
-  height: 74px;
-  background: url("../img/css_sprites.png") -394px -166px; }
-
-.bg-lock {
-  width: 74px;
-  height: 74px;
-  background: url("../img/css_sprites.png") -498px -10px; }
-
-.bg-Calendula {
-  width: 178px;
-  height: 136px;
-  background: url("../img/css_sprites.png") -10px -133px; }
-
-.bg-Chestnut {
-  width: 178px;
-  height: 136px;
-  background: url("../img/css_sprites.png") -300px -10px; }
-
-.bg-Sea_buckthorn {
-  width: 178px;
-  height: 136px;
-  background: url("../img/css_sprites.png") -10px -289px; }
-
-.bg-Sulphates {
-  width: 178px;
-  height: 136px;
-  background: url("../img/css_sprites.png") -208px -289px; }
+.asr {
+  height: 100vh;
+  background: #000; }
 
 /*# sourceMappingURL=styles.css.map */

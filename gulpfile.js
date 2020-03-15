@@ -10,9 +10,10 @@ gulp.task('sass', function () {
   return gulp.src('src/sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      cascade: false
-    }))
+    .pipe(autoprefixer(
+      ['last 15 versions', '> 1%', 'ie 8', 'ie 7'],
+      { cascade: true })
+    )
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('src/css/'))
     .pipe(browserSync.reload({stream: true}))

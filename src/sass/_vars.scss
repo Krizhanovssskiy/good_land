@@ -1,8 +1,8 @@
 :root {
   --color-primary: #f0f0f0; // wt
-  --color-logo: #4b69b0; // wt
-  --color-primary-dark: #f0f0f0; //wt
-  --color-secondary: #ffffff; // wt
+  --color-logo-lening: #FFE361; // wt
+  --color-logo-task: #76fa95;
+  --color-secondary: #78FA9C; // wt
   --color-white: #ffffff;
   --color-black: #000000;
   --color-black-1: #060606;
@@ -11,19 +11,18 @@
   --color-grey-0: #1b1b1b;
   --color-grey-dark: #c5c5c5; // wt
   --color-grey-dark-0: #7e7a7f; //+
-  --color-purple-1: #59c1fb;
-  --color-purple-2: #2d59f5;
-  --color-gradient-video-top: rgba(53, 187, 229, 0.4288);
-  --color-reviews: #f8f9fa;
+  --color-transparent: transparent;
+  --line-gradient-welcome-1: linear-gradient(112.75deg,
+                                            rgba(0, 0, 0, 0.68) 36.09%,
+                                            rgba(0, 0, 0, 0) 81.39%);
+  --line-gradient-welcome-2: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   --spacing-06: 6px;
-  --spacing-08: 8px;
   --spacing-12: 1.2rem;
-  --spacing-18: 1.8rem;
   --spacing-24: 2.4rem;
-  --spacing-30: 3rem;
-  --spacing-36: 3.6rem;
-  --spacing-42: 4.2rem;
-  --spacing-48: 4.8rem;
-  --font-primary: 'Roboto', sans-serif;
+
+  --text-size-21: 21px;
+
+  --font-primary: 'Oswald', sans-serif;
+  --font-secondari: 'Lato', sans-serif;
 
 }
