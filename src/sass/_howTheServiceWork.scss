@@ -1,0 +1,85 @@
+.HowTheServiceWork {
+  position: relative;
+  padding: 100px 0;
+  background: var(--line-gradient-service-1),
+  var(--line-gradient-service-3),
+  url("../img/bg_service.jpg")
+  no-repeat
+  100%;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    background: var(--color-black);
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--line-gradient-service-2);
+    transform: rotate(-90deg);
+  }
+
+  &__listService {
+    margin-top: 60px;
+  }
+  &__listService-item {
+    position: relative;
+    max-width: 580px;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    margin-bottom: 75px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+    }
+    &:nth-child(2) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &:nth-child(3) {
+      margin-left: 100px;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+    div {
+      margin-left: 35px;
+      span {
+        font-family: var(--font-secondari);
+        font-style: normal;
+        font-weight: normal;
+        font-size: var(--text-size-19);
+        line-height: 160%;
+        /* or 30px */
+        color: var(--color-white);
+        opacity: 0.6;
+      }
+    }
+
+    p {
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: normal;
+      font-size: var(--text-size-24);
+      line-height: 150%;
+      /* or 36px */
+
+      color: var(--color-white);
+    }
+  }
+}

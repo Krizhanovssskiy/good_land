@@ -16,11 +16,22 @@
                                             rgba(0, 0, 0, 0.68) 36.09%,
                                             rgba(0, 0, 0, 0) 81.39%);
   --line-gradient-welcome-2: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  --line-gradient-service-1: linear-gradient(360deg,
+                                              #000000 23.08%,
+                                              rgba(0, 0, 0, 0) 100%);
+  --line-gradient-service-2: linear-gradient(180deg,
+                                              #000000 0%,
+                                              rgba(0, 0, 0, 0) 100%);
+  --line-gradient-service-3: linear-gradient(180deg,
+                                              #000000 0%,
+                                              rgba(0, 0, 0, 0) 100%);
   --spacing-06: 6px;
   --spacing-12: 1.2rem;
   --spacing-24: 2.4rem;
 
+  --text-size-19: 19px;
   --text-size-21: 21px;
+  --text-size-24: 24px;
 
   --font-primary: 'Oswald', sans-serif;
   --font-secondari: 'Lato', sans-serif;

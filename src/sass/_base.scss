@@ -37,9 +37,10 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
+  z-index: 5;
 }
 
-.titleLending {
+.titleSectionLending {
   width: 100%;
   font-family: var(--font-primary);
   font-style: normal;
@@ -54,36 +55,42 @@ body {
   color: var(--color-white);
 }
 
-
 .bg-01service {
-  width: 79px; height: 79px;
-  background: url('../img/css_sprites.png') -112px -114px;
+  min-width: 79px;
+  min-height: 79px;
+  background: url('../img/css_sprites.png') no-repeat -112px -114px;
 }
 
 .bg-02service {
-  width: 82px; height: 82px;
-  background: url('../img/css_sprites.png') -10px -114px;
+  min-width: 82px;
+  min-height: 82px;
+  background: url('../img/css_sprites.png') no-repeat -10px -114px;
 }
 
 .bg-joystick_1 {
-  width: 83px; height: 83px;
-  background: url('../img/css_sprites.png') -114px -10px;
+  min-width: 83px;
+  min-height: 83px;
+  background: url('../img/css_sprites.png') no-repeat -114px -10px;
+}
+.bg-token_1 {
+  min-width: 84px;
+  min-height: 84px;
+  background: url('../img/css_sprites.png') no-repeat -10px -10px;
 }
 
 .bg-next {
-  width: 21px; height: 32px;
-  background: url('../img/css_sprites.png') -217px -10px;
+  width: 21px;
+  height: 32px;
+  background: url('../img/css_sprites.png') no-repeat -217px -10px;
 }
 
 .bg-prev {
-  width: 21px; height: 32px;
-  background: url('../img/css_sprites.png') -217px -62px;
+  width: 21px;
+  height: 32px;
+  background: url('../img/css_sprites.png') no-repeat -217px -62px;
 }
 
-.bg-token_1 {
-  width: 84px; height: 84px;
-  background: url('../img/css_sprites.png') -10px -10px;
-}
+
 
 
 
