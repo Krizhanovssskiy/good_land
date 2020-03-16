@@ -14,9 +14,15 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
   -webkit-text-size-adjust: none;
+  height: 100%;
+}
+
+button, input {
+  outline: none;
 }
 
 body {
+  height: 100%;
   position: relative;
   font-family: var(--font-primary);
   font-weight: 400;
@@ -26,10 +32,11 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .titleLending {
@@ -45,6 +52,37 @@ body {
   text-transform: uppercase;
 
   color: var(--color-white);
+}
+
+
+.bg-01service {
+  width: 79px; height: 79px;
+  background: url('../img/css_sprites.png') -112px -114px;
+}
+
+.bg-02service {
+  width: 82px; height: 82px;
+  background: url('../img/css_sprites.png') -10px -114px;
+}
+
+.bg-joystick_1 {
+  width: 83px; height: 83px;
+  background: url('../img/css_sprites.png') -114px -10px;
+}
+
+.bg-next {
+  width: 21px; height: 32px;
+  background: url('../img/css_sprites.png') -217px -10px;
+}
+
+.bg-prev {
+  width: 21px; height: 32px;
+  background: url('../img/css_sprites.png') -217px -62px;
+}
+
+.bg-token_1 {
+  width: 84px; height: 84px;
+  background: url('../img/css_sprites.png') -10px -10px;
 }
 
 
