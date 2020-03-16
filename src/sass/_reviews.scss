@@ -1,3 +1,41 @@
 .Reviews {
   background: var(--color-black);
+
+
+  &__list {
+    margin: 85px 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &-item {
+      display: flex;
+      flex: 1 1 300px;
+      max-width: 500px;
+      padding-left: 10px;
+      margin-bottom: 130px;
+      &:nth-child(odd) {
+        margin-right: 110px;
+      }
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        border-radius: 50%;
+      }
+
+      h5 {
+        font-family: var(--font-secondari);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 160%;
+        /* identical to box height, or 45px */
+        color: var(--color-white);
+      }
+      span {
+        opacity: 0.6;
+      }
+    }
+  }
 }
