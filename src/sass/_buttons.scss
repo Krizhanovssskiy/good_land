@@ -17,4 +17,33 @@
     color: var(--color-white);
     cursor: pointer;
   }
+
+  &__popUp  {
+    padding: 15px 70px;
+    border-color: var(--color-black);
+    background: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+
+  &__close {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    &-left {
+      position: absolute;
+      width: 16px;
+      height: 1.85px;
+      background: #000000;
+      transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+    };
+    &-right {
+      position: absolute;
+      width: 16px;
+      height: 1.85px;
+      background: #000000;
+      transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+    }
+  }
 }

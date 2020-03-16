@@ -25,3 +25,22 @@ btn_next.addEventListener('click', function () {
   }
   item[i].className = 'Gallery__item Gallery__show';
 });
+
+
+
+const openBtnPopUp = [...document.querySelectorAll('.Btn__comeIn')];
+const closeBtnPopUp = document.querySelector('.Btn__close');
+
+const popUp = document.querySelector('.PopUp');
+
+openBtnPopUp.map(item => {
+  item.addEventListener('click', openPopUp)
+});
+closeBtnPopUp.addEventListener('click', closePopUp)
+
+function openPopUp() {
+  popUp.classList.add('PopUp__show')
+}
+function closePopUp() {
+  popUp.classList.remove('PopUp__show')
+}

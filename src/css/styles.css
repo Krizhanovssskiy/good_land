@@ -28,6 +28,7 @@
   --spacing-06: 6px;
   --spacing-12: 1.2rem;
   --spacing-24: 2.4rem;
+  --text-size-15: 15px;
   --text-size-17: 17px;
   --text-size-19: 19px;
   --text-size-21: 21px;
@@ -80,7 +81,7 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  z-index: 5; }
+  z-index: 1; }
 
 .titleSectionLending {
   width: 100%;
@@ -155,6 +156,35 @@ body {
   text-align: center;
   color: var(--color-white);
   cursor: pointer; }
+
+.Btn__popUp {
+  padding: 15px 70px;
+  border-color: var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer; }
+
+.Btn__close {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  cursor: pointer; }
+  .Btn__close-left {
+    position: absolute;
+    width: 16px;
+    height: 1.85px;
+    background: #000000;
+    -webkit-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+        -ms-transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0);
+            transform: matrix(0.71, 0.71, 0.71, -0.71, 0, 0); }
+  .Btn__close-right {
+    position: absolute;
+    width: 16px;
+    height: 1.85px;
+    background: #000000;
+    -webkit-transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+        -ms-transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0);
+            transform: matrix(0.71, -0.71, -0.71, -0.71, 0, 0); }
 
 .Welcome {
   position: relative;
@@ -491,5 +521,70 @@ body {
       color: var(--color-white); }
     .Footer footer span {
       margin-left: 20px; }
+
+.PopUp {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  color: var(--color-black); }
+  .PopUp__show {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .PopUp .Btn__close {
+    position: absolute;
+    top: 20px;
+    right: 20px; }
+  .PopUp__box {
+    position: fixed;
+    width: 500px;
+    height: 320px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: var(--color-white); }
+  .PopUp h4 {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-15);
+    line-height: 17px;
+    /* identical to box height, or 94% */
+    color: var(--color-black); }
+  .PopUp p {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-15);
+    line-height: 17px;
+    /* identical to box height, or 113% */
+    color: var(--color-black); }
 
 /*# sourceMappingURL=styles.css.map */
