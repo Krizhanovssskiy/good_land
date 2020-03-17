@@ -2,12 +2,17 @@
 @import 'fonts';
 @import 'base';
 @import 'buttons';
-@import 'welcome';
-@import 'taskExamples';
-@import 'task';
-@import 'howTheServiceWork';
-@import 'reviews';
-@import 'footer';
-@import 'popUp';
+@import 'landing/welcome';
+@import 'landing/taskExamples';
+@import 'landing/task';
+@import 'landing/howTheServiceWork';
+@import 'landing/reviews';
+@import 'landing/footer';
+@import 'landing/popUp';
+
+
+@import 'taskPages/headerTaskPages';
+@import 'taskPages/main';
+@import 'taskPages/startedTheTask';
 
 
