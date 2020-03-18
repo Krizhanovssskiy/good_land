@@ -1,0 +1,68 @@
+@import '../mixins';
+.StartedTheTask {
+  padding: 20px 0;
+  flex-grow: 3;
+
+  .container {
+    @include centering-children;
+    flex-direction: column;
+  }
+
+  &__contentTask, &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__contentTask {
+    margin-bottom: 60px;
+    img  {
+      max-width: 575px;
+      width: 100%;
+    }
+    div {
+      max-width: 233px;
+    }
+    h3 {
+      margin-bottom: 40px;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: bold;
+      font-size: var(--text-size-26);
+      line-height: 31px;
+      color: var(--color-black);
+    }
+    span {
+      display: block;
+      margin: 50px 0 10px;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: normal;
+      font-size: 39px;
+      line-height: 47px;
+      /* identical to box height */
+      color: var(--color-black);
+    }
+  }
+
+  &__buttons {
+    a {
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: bold;
+      font-size: var(--text-size-18);
+      line-height: 22px;
+      /* identical to box height, or 117% */
+
+      letter-spacing: 0.06em;
+      color: var(--color-black);
+    }
+
+    .Btn__start {
+      padding: 20px 80px;
+      color: var(--color-secondary);
+    }
+  }
+}

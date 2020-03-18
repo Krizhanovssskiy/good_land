@@ -29,6 +29,8 @@ button, input {
 body {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
   font-family: var(--font-primary);
   font-weight: 400;
@@ -78,6 +80,16 @@ body {
   font-size: var(--text-size-19);
   line-height: 23px;
   text-align: center;
+
+  color: var(--color-black);
+}
+
+.textUnderTitle {
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--text-size-20);
+  line-height: 150%;
 
   color: var(--color-black);
 }

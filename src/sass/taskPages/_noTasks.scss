@@ -1,0 +1,15 @@
+@import '../mixins';
+.NoTasks {
+  padding: 20px 0;
+  flex-grow: 3;
+
+  .container {
+    @include centering-children;
+    flex-direction: column;
+  }
+
+  .textUnderTitle {
+    margin-top: 50px;
+    text-align: center;
+  }
+}

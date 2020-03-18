@@ -11,20 +11,8 @@
   z-index: 3;
   color: var(--color-black);
 
-  &__show {
-    display: flex;
-  }
-
-  .Btn__close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
   &__box {
     position: fixed;
-    width: 500px;
-    height:320px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -51,4 +39,79 @@
     /* identical to box height, or 113% */
     color: var(--color-black);
   }
+
+  &__show {
+    display: flex;
+  }
+
+  .Btn__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__Error, &__complainAboutPhoto {
+    width: 500px;
+    height:320px;
+  }
+
+  &__complainAboutPhoto {
+    padding: 25px;
+    justify-content: space-between;
+    align-items: baseline;
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      margin-bottom: 15px;
+    }
+
+    .Btn__popUp-btn {
+      padding: 15px 25px;
+      text-transform: uppercase;
+    }
+
+    .Btn__transparent {
+      margin-right: 20px;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: bold;
+      font-size: var(--text-size-12);
+      line-height: 14px;
+      text-transform: uppercase;
+
+      color: var(--color-black);
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 179px;
+    padding: 20px;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-13);
+    line-height: 20px;
+    /* identical to box height, or 154% */
+    color: var(--color-black);
+
+    opacity: 0.4;
+    resize: none;
+  }
+
+
+
+
+
+
 }
