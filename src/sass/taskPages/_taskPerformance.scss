@@ -1,6 +1,7 @@
 @import '../mixins';
 .TaskPerformance {
   padding: 20px 0;
+  display: flex;
   flex-grow: 3;
   img {
     max-width: 725px;
@@ -9,6 +10,7 @@
 
   .container {
     @include centering-children;
+    flex-grow: 3;
 
     & > div {
       display: flex;

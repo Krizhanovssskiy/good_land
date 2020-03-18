@@ -56,6 +56,23 @@
     cursor: pointer;
   }
 
+  &__borderTransparent {
+    width: 197px;
+    height: 45px;
+    border: 1px solid var(--color-black);
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-14);
+    line-height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    color: var(--color-black);
+    cursor: pointer;
+  }
+
   &__back {
     padding: 18px 35px;
     background: transparent;

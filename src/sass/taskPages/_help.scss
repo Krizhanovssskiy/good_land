@@ -1,0 +1,22 @@
+@import '../mixins';
+.Help {
+  display: flex;
+  flex-grow: 3;
+  padding: 70px 0 40px;
+  background: var(--color-white);
+  .container {
+    @include centering-children;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .textUnderTitle {
+    text-align: center;
+
+    span {
+      text-decoration: underline;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+  }
+}

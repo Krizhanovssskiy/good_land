@@ -10,43 +10,25 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="HeaderTaskPage">
-    <div class="container">
-        <div class="HeaderTaskPage__left">
-            <a href="#" class="logo">
-                <img src="./img/logoGreen.png" alt="good land">
-            </a>
-            <p>
-                Выполняй задания
-                <br>и получай золото в WoT
-            </p>
-        </div>
-        <div class="HeaderTaskPage__right">
-            <p>
-                Заработали:
-                <span>
-                            230 золота
-                        </span>
-            </p>
-            <div>
-                <button class="Btn__takeInPlay">
-                    Забрать в игру
-                </button>
-                <p>
-                    от 100 золота
-                </p>
-            </div>
-            <a href="settings.html" class="bg-setting">
 
-            </a>
-            <a href="help.html" class="bg-help">
-
-            </a>
+    <div class="PopUp Enrollment">
+    <div class="PopUp__box PopUp__enrollmentSuccessful">
+        <div class="Btn__close">
+            <span class="Btn__close-left"></span>
+            <span class="Btn__close-right"></span>
         </div>
 
+        <h4>
+            Зачисление проведено успешно
+        </h4>
+        <button class="Btn__popUp-btn">
+            ПРОДОЛЖИТЬ
+        </button>
     </div>
-</header>
-    <div class="container">
+</div>
+
+    <header class="HeaderTaskPage">
+        <div class="container">
         <div class="HeaderTaskPage__left">
             <a href="#" class="logo">
                 <img src="./img/logoGreen.png" alt="good land">
@@ -60,8 +42,8 @@
             <p>
                 Заработали:
                 <span>
-                            230 золота
-                        </span>
+                        230 золота
+                    </span>
             </p>
             <div>
                 <button class="Btn__takeInPlay">
@@ -80,18 +62,24 @@
         </div>
 
     </div>
-</header>
-
-    <div class="NoTasks">
+    </header>
+    <section class="Help">
         <div class="container">
             <h3 class="titleSectionTaskPages">
-                Вы выполнили
-                <br>все задания для World of Tanks
+                Помощь
             </h3>
             <p class="textUnderTitle">
-                Приходите позже
+                Если вам требуется помощь
+                <br>пишите на почту <span>mail@mail.ru</span>
+                <br>и мы ответим и постараемся помощь
             </p>
+            <a href="main.html" class="Btn__borderTransparent">
+                Назад
+            </a>
         </div>
-    </div>
+    </section>
+
+    <script src="js/index.js"></script>
+
 </body>
 </html>

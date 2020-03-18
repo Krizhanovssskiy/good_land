@@ -1,0 +1,41 @@
+@import '../mixins';
+
+.GetReward {
+  padding: 70px 0 40px;
+  flex-grow: 3;
+  display: flex;
+  .container {
+    @include centering-children;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-24);
+    line-height: 190%;
+
+    color: var(--color-black);
+  }
+
+  &__imgDone {
+    width: 105px;
+    height: 105px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    @include centering-children;
+  }
+
+  &__text {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-40);
+    line-height: 150%;
+
+    color: var(--color-black);
+  }
+}

@@ -23,17 +23,35 @@
 (function () {
   const openBtnPopUpPhoto = document.querySelector('.OpenPhotoPopUp');
   const closeBtnPopUpPhoto = document.querySelector('.Btn__close');
-  const popUpPhoro = document.querySelector('.Photo');
+  const popUp = document.querySelector('.Photo');
 
   if (openBtnPopUpPhoto && closeBtnPopUpPhoto) {
 
     openBtnPopUpPhoto.addEventListener('click', openPopUp)
     closeBtnPopUpPhoto.addEventListener('click', closePopUp)
     function openPopUp() {
-      popUpPhoro.classList.add('PopUp__show')
+      popUp.classList.add('PopUp__show')
     }
     function closePopUp() {
-      popUpPhoro.classList.remove('PopUp__show')
+      popUp.classList.remove('PopUp__show')
+    }
+  }
+})();
+
+(function () {
+  const openBtnPopUpPhoto = document.querySelector('.HeaderTaskPage .Btn__takeInPlay');
+  const closeBtnPopUpPhoto = document.querySelector('.Btn__close');
+  const popUp = document.querySelector('.Enrollment');
+
+  if (openBtnPopUpPhoto && closeBtnPopUpPhoto) {
+
+    openBtnPopUpPhoto.addEventListener('click', openPopUp)
+    closeBtnPopUpPhoto.addEventListener('click', closePopUp)
+    function openPopUp() {
+      popUp.classList.add('PopUp__show')
+    }
+    function closePopUp() {
+      popUp.classList.remove('PopUp__show')
     }
   }
 })();

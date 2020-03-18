@@ -6,7 +6,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-black-1: #060606;
-  --color-grey-light: #f6f5f6;
+  --color-grey-light: #F7F7F7;
   --color-grey: #f2f2f2;
   --color-grey-0: #1b1b1b;
   --color-grey-dark: #c5c5c5;
@@ -31,6 +31,7 @@
   --text-size-11: 11px;
   --text-size-12: 12px;
   --text-size-13: 13px;
+  --text-size-14: 14px;
   --text-size-15: 15px;
   --text-size-16: 16px;
   --text-size-17: 17px;
@@ -38,10 +39,12 @@
   --text-size-19: 19px;
   --text-size-20: 20px;
   --text-size-21: 21px;
+  --text-size-22: 22px;
   --text-size-24: 24px;
   --text-size-26: 26px;
   --text-size-27: 27px;
   --text-size-29: 29px;
+  --text-size-40: 40px;
   --text-size-48: 48px;
   --font-primary: 'Oswald', sans-serif;
   --font-secondari: 'Lato', sans-serif; }
@@ -82,7 +85,7 @@ button, input {
 
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -102,7 +105,6 @@ body {
 .container {
   max-width: 1200px;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
   padding: 0 15px;
   z-index: 1; }
@@ -166,9 +168,9 @@ body {
   background: url("../img/css_sprites.png") -10px -114px; }
 
 .bg-help {
-  width: 18px;
-  height: 20px;
-  background: url("../img/css_sprites.png") -217px -114px; }
+  min-width: 18px;
+  min-height: 20px;
+  background: url("../img/css_sprites.png") -217px -170px; }
 
 .bg-joystick_1 {
   min-width: 83px;
@@ -178,22 +180,27 @@ body {
 .bg-next {
   min-width: 21px;
   min-height: 32px;
-  background: url("../img/css_sprites.png") -217px -10px; }
+  background: url("../img/css_sprites.png") -217px -66px; }
 
 .bg-prev {
   min-width: 21px;
   min-height: 32px;
-  background: url("../img/css_sprites.png") -217px -62px; }
+  background: url("../img/css_sprites.png") -217px -118px; }
 
 .bg-setting {
   min-width: 14px;
   min-height: 15px;
-  background: url("../img/css_sprites.png") -217px -154px; }
+  background: url("../img/css_sprites.png") -10px -216px; }
 
 .bg-token_1 {
   min-width: 84px;
   min-height: 84px;
   background: url("../img/css_sprites.png") -10px -10px; }
+
+.bg-Vector {
+  min-width: 49px;
+  min-height: 36px;
+  background: url("../img/css_sprites.png") -217px -10px; }
 
 .Btn__comeIn {
   padding: 25px 50px;
@@ -248,6 +255,31 @@ body {
   border: none;
   cursor: pointer; }
 
+.Btn__borderTransparent {
+  width: 197px;
+  height: 45px;
+  border: 1px solid var(--color-black);
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--text-size-14);
+  line-height: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  color: var(--color-black);
+  cursor: pointer; }
+
 .Btn__back {
   padding: 18px 35px;
   background: transparent;
@@ -285,6 +317,7 @@ body {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
   .Welcome .container {
+    height: 100%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -440,6 +473,8 @@ body {
   opacity: 0.7; }
 
 .HowTheServiceWork {
+  width: 100%;
+  min-height: 100%;
   position: relative;
   padding: 100px 0;
   background: var(--line-gradient-service-1), var(--line-gradient-service-3), url("../../img/bg_service.jpg") no-repeat 100%;
@@ -690,6 +725,9 @@ body {
   .PopUp__Error, .PopUp__complainAboutPhoto {
     width: 500px;
     height: 320px; }
+  .PopUp__enrollmentSuccessful {
+    width: 500px;
+    height: 260px; }
   .PopUp__complainAboutPhoto {
     padding: 25px;
     -webkit-box-pack: justify;
@@ -803,6 +841,10 @@ body {
 
 .MainTaskPages {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 3;
   -webkit-flex-grow: 3;
       -ms-flex-positive: 3;
@@ -820,6 +862,10 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -911,6 +957,10 @@ body {
 
 .StartedTheTask {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 3;
   -webkit-flex-grow: 3;
       -ms-flex-positive: 3;
@@ -928,6 +978,10 @@ body {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -987,6 +1041,10 @@ body {
 
 .TaskPerformance {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 3;
   -webkit-flex-grow: 3;
       -ms-flex-positive: 3;
@@ -1006,7 +1064,11 @@ body {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
-            justify-content: center; }
+            justify-content: center;
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3; }
     .TaskPerformance .container > div {
       display: -webkit-box;
       display: -webkit-flex;
@@ -1071,6 +1133,10 @@ body {
 
 .NoTasks {
   padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 3;
   -webkit-flex-grow: 3;
       -ms-flex-positive: 3;
@@ -1080,21 +1146,215 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 3;
+    -webkit-flex-grow: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .NoTasks .textUnderTitle {
+    margin-top: 50px;
+    text-align: center; }
+
+.GetReward {
+  padding: 70px 0 40px;
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .GetReward .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .GetReward__title {
+    text-align: center;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-24);
+    line-height: 190%;
+    color: var(--color-black); }
+  .GetReward__imgDone {
+    width: 105px;
+    height: 105px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .GetReward__text {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-40);
+    line-height: 150%;
+    color: var(--color-black); }
+
+.Help {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  padding: 70px 0 40px;
+  background: var(--color-white); }
+  .Help .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .Help .textUnderTitle {
+    text-align: center; }
+    .Help .textUnderTitle span {
+      text-decoration: underline;
+      opacity: 0.6;
+      cursor: pointer; }
+
+.Settings {
+  padding: 70px 0 40px;
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--color-white); }
+  .Settings .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .NoTasks .textUnderTitle {
-    margin-top: 50px;
+  .Settings__content {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .Settings__left, .Settings__right {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .Settings__left .titleSectionTaskPages {
+    text-align: left; }
+  .Settings__left .Settings__small-text {
+    margin: 20px 0 35px; }
+  .Settings__right {
     text-align: center; }
+    .Settings__right .titleSectionTaskPages {
+      margin-bottom: 30px; }
+  .Settings__table {
+    width: 100%;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-14);
+    line-height: 17px;
+    text-align: right;
+    color: var(--color-black); }
+    .Settings__table-textLight {
+      opacity: 0.3; }
+    .Settings__table tbody td, .Settings__table thead th {
+      padding: 10px 20px; }
+    .Settings__table tbody tr:nth-child(odd) {
+      background: var(--color-grey-light); }
+  .Settings__text {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-22);
+    line-height: 150%;
+    color: var(--color-black); }
+  .Settings__small-text {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-17);
+    line-height: 150%;
+    color: var(--color-black);
+    opacity: 0.5; }
+  .Settings .Btn__start {
+    text-transform: none;
+    color: var(--color-white); }
 
 /*# sourceMappingURL=styles.css.map */
