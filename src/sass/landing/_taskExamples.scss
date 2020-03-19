@@ -3,16 +3,35 @@
 }
 
 .Gallery {
-  padding: 100px 10px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: no-repeat url('../../img/Rectangle_496.png'),
-  linear-gradient(90deg,
-                  rgba(10, 10, 10, 0.64) 35%,
-                  rgba(10, 10, 10, 0.64) 35%) 50% 50%;
-  opacity: 0.9;
+
+
+    position: relative;
+    padding: 100px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: no-repeat
+                  //linear-gradient(90deg,
+                  //              rgba(10, 10, 10, 0) 35%,
+                  //              rgba(10, 10, 10, 0) 35%),
+                  url('../../img/Rectangle_496.png'),
+                  rgba(10, 10, 10, 0.64)
+                  50% 50%;
+      opacity: 0.45;
+  }
+
+
+  .container {
+    opacity: 1;
+  }
 
   &__list {
     position: relative;
@@ -35,7 +54,7 @@
       min-width: 50%;
       height: auto;
       margin-right: 80px;
-      border-radius: 8px;
+      //border-radius: 8px;
       object-fit: cover;
     }
   }
