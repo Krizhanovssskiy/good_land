@@ -45,10 +45,13 @@
       }
     }
     .bg-help {
+      margin-top: 7px;
       margin-left: 25px;
     }
-    .bg-setting, .bg-help {
+    .bg-setting {
       margin-top: 10px;
+    }
+    .bg-setting, .bg-help {
       border: none;
       cursor: pointer;
     }

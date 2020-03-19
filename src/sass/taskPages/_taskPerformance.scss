@@ -8,6 +8,10 @@
     max-height: 620px;
   }
 
+  form {
+    color: #000000;
+  }
+
   .container {
     @include centering-children;
     flex-grow: 3;
@@ -51,6 +55,16 @@
   &__buttons {
     display: flex;
     flex-direction: column;
+
+    .Btn__radio {
+      div {
+        margin-bottom: 10px;
+      }
+
+      margin-bottom: 50px;
+    }
+
+
   }
 
   .Btn__start {
