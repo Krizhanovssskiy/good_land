@@ -8,7 +8,7 @@
   --color-black-1: #060606;
   --color-grey-light: #F7F7F7;
   --color-grey: #f2f2f2;
-  --color-grey-0: #1b1b1b;
+  --color-grey-0: #E0E0E0;
   --color-grey-dark: #c5c5c5;
   --color-grey-dark-0: #7e7a7f;
   --color-transparent: transparent;
@@ -19,15 +19,12 @@
   --line-gradient-service-1: linear-gradient(360deg,
                                               #000000 0%,
                                               rgba(0, 0, 0, 0) 100%);
-  --line-gradient-service-2: linear-gradient(180deg,
+  --line-gradient-service-2: linear-gradient(90deg,
                                               #000000 0%,
-                                              rgba(0, 0, 0, 0) 100%);
+                                              rgba(0, 0, 0, 0) 40%);
   --line-gradient-service-3: linear-gradient(180deg,
                                               #000000 0%,
-                                              rgba(0, 0, 0, 0) 95%);
-  --spacing-06: 6px;
-  --spacing-12: 1.2rem;
-  --spacing-24: 2.4rem;
+                                              rgba(0, 0, 0, 0) 100%);
   --text-size-11: 11px;
   --text-size-12: 12px;
   --text-size-13: 13px;
@@ -103,11 +100,12 @@ body {
   background-color: var(--color-bg-task); }
 
 .container {
+  position: relative;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  z-index: 1; }
+  z-index: 2; }
 
 .titleSectionLending {
   width: 100%;
@@ -236,6 +234,18 @@ body {
   cursor: pointer; }
 
 .Btn__start {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 12px 25px;
   border: none;
   background: var(--color-black);
@@ -374,13 +384,21 @@ body {
 
 .Welcome {
   position: relative;
-  padding: 50px 0;
+  padding: 50px 0 0;
   width: 100%;
   height: 100vh;
-  background: var(--line-gradient-welcome-1), var(--line-gradient-welcome-2), url("../img/image_38.png"), no-repeat, 50% 50%;
+  background: url("../img/image_38.png"), no-repeat, 50% 50%;
   background-size: cover;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+  .Welcome:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--line-gradient-welcome-1), var(--line-gradient-welcome-2); }
   .Welcome .container {
     height: 100%;
     display: -webkit-box;
@@ -435,6 +453,8 @@ body {
         width: 23px;
         height: 2px;
         background: var(--color-white); }
+  .Welcome .titleSectionLending {
+    margin-bottom: 50px; }
 
 .TaskExamples {
   background: var(--color-black); }
@@ -453,7 +473,8 @@ body {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  background: url("../img/Rectangle_496.png"); }
   .Gallery:before {
     content: '';
     position: absolute;
@@ -461,15 +482,17 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: no-repeat url("../img/Rectangle_496.png"), rgba(10, 10, 10, 0.64) 50% 50%;
-    opacity: 0.45; }
+    background: no-repeat rgba(10, 10, 10, 0.85) 50% 50%;
+    opacity: 1;
+    z-index: 2; }
   .Gallery .container {
     opacity: 1; }
   .Gallery__list {
     position: relative;
     height: 400px;
     width: 100%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    z-index: 2; }
   .Gallery__item {
     width: 100%;
     position: absolute;
@@ -549,18 +572,18 @@ body {
   min-height: 100%;
   position: relative;
   padding: 100px 0;
-  background: var(--line-gradient-service-1), var(--line-gradient-service-3), url("../img/bg_service.jpg") no-repeat 100%;
+  background: url("../img/bg_service.jpg") no-repeat 100%;
+  background-size: cover;
   overflow: hidden; }
-  .HowTheServiceWork .container {
-    position: relative; }
   .HowTheServiceWork:after {
     content: '';
     position: absolute;
     top: 0;
-    right: 50%;
+    right: 0;
     bottom: 0;
     left: 0;
-    background: var(--color-black); }
+    background: var(--line-gradient-service-1), var(--line-gradient-service-3);
+    background-size: cover; }
   .HowTheServiceWork:before {
     content: '';
     position: absolute;
@@ -568,10 +591,12 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    min-width: 100%;
+    min-height: 100%;
     background: var(--line-gradient-service-2);
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
+    background-size: cover; }
+  .HowTheServiceWork .container {
+    position: relative; }
   .HowTheServiceWork__listService {
     margin-top: 60px; }
   .HowTheServiceWork__listService-item {
@@ -978,7 +1003,7 @@ body {
   .MainTaskPages__item {
     max-width: 272px;
     width: 100%;
-    max-height: 310px;
+    min-height: 310px;
     height: 100%;
     margin-bottom: 10px;
     display: -webkit-box;
@@ -996,7 +1021,7 @@ body {
             align-items: center;
     overflow: hidden;
     background: var(--color-white);
-    border: 2px solid var(--color-bg-task); }
+    border: 1px solid var(--color-grey-0); }
     .MainTaskPages__item:hover {
       border: 2px solid var(--color-secondary); }
       .MainTaskPages__item:hover .Btn__start {

@@ -36,6 +36,9 @@
   }
 
   &__start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px 25px;
     border: none;
     background: var(--color-black);

@@ -3,27 +3,23 @@
   min-height: 100%;
   position: relative;
   padding: 100px 0;
-  background: var(--line-gradient-service-1),
-              var(--line-gradient-service-3),
+  background:
               url("../img/bg_service.jpg")
               no-repeat
-              100%;
+               100%;
+  background-size: cover;
   overflow: hidden;
-
-  .container {
-    position: relative;
-  }
-
   &:after {
     content: '';
     position: absolute;
     top: 0;
-    right: 50%;
+    right: 0;
     bottom: 0;
     left: 0;
-    background: var(--color-black);
+    background: var(--line-gradient-service-1),
+    var(--line-gradient-service-3);
+    background-size: cover;
   }
-
   &:before {
     content: '';
     position: absolute;
@@ -31,8 +27,15 @@
     right: 0;
     bottom: 0;
     left: 0;
+    min-width: 100%;
+    min-height: 100%;
     background: var(--line-gradient-service-2);
-    transform: rotate(-90deg);
+    //transform: rotate(-90deg);
+    background-size: cover;
+  }
+
+  .container {
+    position: relative;
   }
 
   &__listService {

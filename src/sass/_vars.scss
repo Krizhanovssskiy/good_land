@@ -8,7 +8,7 @@
   --color-black-1: #060606;
   --color-grey-light: #F7F7F7;
   --color-grey: #f2f2f2;
-  --color-grey-0: #1b1b1b;
+  --color-grey-0: #E0E0E0;
   --color-grey-dark: #c5c5c5; // wt
   --color-grey-dark-0: #7e7a7f; //+
   --color-transparent: transparent;
@@ -16,18 +16,17 @@
                                             rgba(0, 0, 0, 0.68) 36.09%,
                                             rgba(0, 0, 0, 0) 100%);
   --line-gradient-welcome-2: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%);
+
+
   --line-gradient-service-1: linear-gradient(360deg,
                                               #000000 0%,
                                               rgba(0, 0, 0, 0) 100%);
-  --line-gradient-service-2: linear-gradient(180deg,
+  --line-gradient-service-2: linear-gradient(90deg,
                                               #000000 0%,
-                                              rgba(0, 0, 0, 0) 100%);
+                                              rgba(0, 0, 0, 0) 40%);
   --line-gradient-service-3: linear-gradient(180deg,
                                               #000000 0%,
-                                              rgba(0, 0, 0, 0) 95%);
-  --spacing-06: 6px;
-  --spacing-12: 1.2rem;
-  --spacing-24: 2.4rem;
+                                              rgba(0, 0, 0, 0) 100%);
 
   --text-size-11: 11px;
   --text-size-12: 12px;
