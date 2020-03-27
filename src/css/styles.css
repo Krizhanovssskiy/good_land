@@ -80,7 +80,7 @@ html {
 button, input {
   outline: none; }
 
-body {
+body, #root {
   width: 100%;
   min-height: 100%;
   display: -webkit-box;
