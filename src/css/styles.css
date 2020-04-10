@@ -2,6 +2,7 @@
   --color-logo-lening: #FFE361;
   --color-logo-task: #76fa95;
   --color-secondary: #78FA9C;
+  --color-green: #4FF97E;
   --color-bg-task: #EFEFEF;
   --color-white: #ffffff;
   --color-black: #000000;
@@ -9,6 +10,8 @@
   --color-grey-light: #F7F7F7;
   --color-grey: #f2f2f2;
   --color-grey-0: #E0E0E0;
+  --color-grey-1: #666666;
+  --color-grey-2: #999999;
   --color-grey-dark: #c5c5c5;
   --color-grey-dark-0: #7e7a7f;
   --color-transparent: transparent;
@@ -70,6 +73,9 @@ a {
   display: inline-block;
   text-decoration: none; }
 
+ol, ul, li {
+  list-style: none; }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -82,6 +88,7 @@ button, input {
 
 body, #root {
   width: 100%;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -995,6 +1002,8 @@ body, #root {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     .MainTaskPages__listTask .Btn__start {
+      width: 160px;
+      height: 40px;
       margin-top: 20px;
       margin-bottom: 10px; }
     .MainTaskPages__listTask img {
@@ -1003,6 +1012,7 @@ body, #root {
       max-height: 137px;
       margin-bottom: 15px; }
   .MainTaskPages__item {
+    position: relative;
     max-width: 272px;
     width: 100%;
     min-height: 310px;
@@ -1024,11 +1034,31 @@ body, #root {
     overflow: hidden;
     background: var(--color-white);
     border: 1px solid var(--color-grey-0); }
-    .MainTaskPages__item:hover {
+    .MainTaskPages__item-task:hover {
       border: 2px solid var(--color-secondary); }
-      .MainTaskPages__item:hover .Btn__start {
+      .MainTaskPages__item-task:hover .Btn__start {
         background: var(--color-secondary);
         color: var(--color-black); }
+    .MainTaskPages__item-check:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #EFEFEF;
+      opacity: 0.8;
+      border: 1px solid #999999;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+    .MainTaskPages__item-check .Btn__start {
+      background: var(--color-transparent);
+      color: var(--color-black);
+      padding: 0;
+      border: 2px solid rgba(51, 51, 51, 0.3);
+      z-index: 2; }
     .MainTaskPages__item-done {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
@@ -1037,7 +1067,8 @@ body, #root {
       -webkit-box-align: center;
       -webkit-align-items: center;
           -ms-flex-align: center;
-              align-items: center; }
+              align-items: center;
+      border: 2px dashed var(--color-grey-1); }
       .MainTaskPages__item-done span {
         color: var(--color-secondary); }
     .MainTaskPages__item span {
@@ -1048,6 +1079,36 @@ body, #root {
       font-size: var(--text-size-27);
       line-height: 32px;
       text-align: center; }
+    .MainTaskPages__item-doneTrue .Btn__start, .MainTaskPages__item-error .Btn__start {
+      padding: 0;
+      text-transform: none; }
+  .MainTaskPages__text-doneTrue {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 15px;
+    color: var(--color-green); }
+    .MainTaskPages__text-doneTrue:after {
+      content: '';
+      width: 31px;
+      height: 27px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../img/doneTrue-1.png") no-repeat; }
+  .MainTaskPages__text-error {
+    position: relative;
+    padding-left: 25px;
+    margin-top: 15px;
+    color: var(--color-grey-2);
+    line-height: 1; }
+    .MainTaskPages__text-error:after {
+      content: '';
+      width: 31px;
+      height: 27px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("../img/error-1.png") no-repeat; }
   .MainTaskPages__total {
     margin-bottom: 15px;
     font-family: var(--font-secondari);
@@ -1106,32 +1167,20 @@ body, #root {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
-  .StartedTheTask__contentTask {
-    margin-bottom: 60px; }
-    .StartedTheTask__contentTask img {
-      max-width: 575px;
-      width: 100%; }
-    .StartedTheTask__contentTask div {
-      max-width: 233px; }
-    .StartedTheTask__contentTask h3 {
-      margin-bottom: 40px;
-      font-family: var(--font-secondari);
-      font-style: normal;
-      font-weight: bold;
-      font-size: var(--text-size-26);
-      line-height: 31px;
-      color: var(--color-black); }
-    .StartedTheTask__contentTask span {
-      display: block;
-      margin: 50px 0 10px;
-      font-family: var(--font-secondari);
-      font-style: normal;
-      font-weight: normal;
-      font-size: 39px;
-      line-height: 47px;
-      /* identical to box height */
-      color: var(--color-black); }
+  .StartedTheTask__contentTask img {
+    max-width: 575px;
+    width: 100%; }
+  .StartedTheTask__contentTask h3 {
+    margin-bottom: 40px;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: bold;
+    font-size: var(--text-size-26);
+    line-height: 31px;
+    color: var(--color-black); }
   .StartedTheTask__buttons a {
+    margin-top: 20px;
+    margin-right: 20px;
     font-family: var(--font-secondari);
     font-style: normal;
     font-weight: bold;
@@ -1141,8 +1190,62 @@ body, #root {
     letter-spacing: 0.06em;
     color: var(--color-black); }
   .StartedTheTask__buttons .Btn__start {
-    padding: 20px 80px;
+    padding: 20px 40px;
     color: var(--color-secondary); }
+  .StartedTheTask__buttons .Btn__back {
+    width: 125px; }
+  .StartedTheTask__text-big {
+    display: block;
+    margin: 50px 0 10px;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 47px;
+    /* identical to box height */
+    color: var(--color-black); }
+  .StartedTheTask .textUnderTitle span {
+    text-decoration: underline;
+    cursor: pointer; }
+
+.RulesPopup h4 {
+  margin: 0 25px;
+  font-family: var(--font-secondari);
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--color-black); }
+
+.RulesPopup p {
+  margin: 25px;
+  font-size: 20px;
+  line-height: 24px; }
+
+.RulesPopup ul {
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+.RulesPopup__complain {
+  width: 541px;
+  padding: 25px 0;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start; }
+
+.RulesPopup .Btn__close {
+  width: 20px;
+  height: 20px;
+  opacity: 0.4; }
+  .RulesPopup .Btn__close-left {
+    width: 25px; }
+  .RulesPopup .Btn__close-right {
+    width: 25px; }
+
+.RulesPopup .Btn__borderTransparent {
+  width: 150px;
+  height: 60px;
+  margin-left: 25px; }
 
 .TaskPerformance {
   padding: 20px 0;

@@ -10,6 +10,47 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+
+    <div class="PopUp RulesPopup">
+        <div class="PopUp__box RulesPopup__complain">
+            <div class="Btn__close">
+                <span class="Btn__close-left"></span>
+                <span class="Btn__close-right"></span>
+            </div>
+
+            <h4>
+                Полный список правил
+            </h4>
+
+            <ul>
+                <li>
+                    <p>
+                        - каждое лицо надо отмечать
+                        отдельным квадратиком
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        - лица показанные частично тоже надо отмечать
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        - отражение лиц не надо отмечать
+                    </p>
+                </li>
+            </ul>
+            <p>
+                После разметки вашу работу проверит модератор
+                и если найдет ошибку - вернет на доработку
+            </p>
+
+            <button class="Btn__borderTransparent">
+                ЗАКРЫТЬ
+            </button>
+        </div>
+    </div>
+
     <header class="HeaderTaskPage">
     <div class="container">
         <div class="HeaderTaskPage__left">
@@ -52,34 +93,44 @@
                 <div>
                     <h3>
                         Отметить лица
+                        <br>
                         на 12 фотографиях
                     </h3>
                     <p class="textUnderTitle">
-                        Мышкой выделите
-                        квадратами все лица
-                        на фотографиях, даже
+                        Мышкой выделите квадратами
+                        <br>
+                        все лица на фотографиях, даже
+                        <br>
                         показанные частично.
+                        <br>
+                        <span id="ShowRules">
+                            Показать все правила
+                        </span>
                     </p>
-                    <span>
+                    <span class="StartedTheTask__text-big">
                         +100 золота
                     </span>
                     <p class="textUnderTitle">
                         ≈ 1-2 мин
                     </p>
+
+                    <div class="StartedTheTask__buttons">
+                        <a href="main.html" class="Btn__back">
+                            Назад
+                        </a>
+                        <a href="taskPerformance.html" class="Btn__start">
+                            НАЧАТЬ
+                        </a>
+                    </div>
                 </div>
 
                 <img src="./img/startPage1.jpg" alt="">
 
             </div>
-            <div class="StartedTheTask__buttons">
-                <a href="main.html" class="Btn__back">
-                    Назад
-                </a>
-                <a href="taskPerformance.html" class="Btn__start">
-                    НАЧАТЬ
-                </a>
-            </div>
+
         </div>
     </section>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

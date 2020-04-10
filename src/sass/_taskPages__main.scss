@@ -19,6 +19,8 @@
     flex-wrap: wrap;
 
     .Btn__start {
+      width: 160px;
+      height: 40px;
       margin-top: 20px;
       margin-bottom: 10px;
     }
@@ -32,6 +34,7 @@
   }
 
   &__item {
+    position: relative;
     max-width: 272px;
     width: 100%;
     min-height: 310px;
@@ -44,18 +47,46 @@
     background: var(--color-white);
     border: 1px solid var(--color-grey-0);
     //border-radius: 17px;
-    &:hover {
-      border: 2px solid var(--color-secondary);
 
+    &-task {
+      &:hover {
+        border: 2px solid var(--color-secondary);
+
+        .Btn__start {
+          background: var(--color-secondary);
+          color: var(--color-black);
+        }
+      }
+    }
+
+    &-check {
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: #EFEFEF;
+        opacity: 0.8;
+        border: 1px solid #999999;
+        box-sizing: border-box;
+      }
       .Btn__start {
-        background: var(--color-secondary);
+        background: var(--color-transparent);
         color: var(--color-black);
+        padding: 0;
+        border: 2px solid rgba(51, 51, 51, 0.3);;
+        z-index: 2;
       }
     }
 
     &-done {
       justify-content: center;
       align-items: center;
+      border: 2px dashed var(--color-grey-1);
 
       span {
         color: var(--color-secondary);
@@ -71,6 +102,48 @@
       line-height: 32px;
       text-align: center;
 
+    }
+
+    &-doneTrue, &-error {
+      .Btn__start {
+        padding: 0;
+        text-transform: none;
+      }
+    }
+  }
+
+  &__text {
+    &-doneTrue {
+      position: relative;
+      padding-left: 30px;
+      margin-top: 15px;
+      color: var(--color-green);
+      &:after {
+        content: '';
+        width: 31px;
+        height: 27px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/doneTrue-1.png") no-repeat;
+      }
+    }
+
+    &-error {
+      position: relative;
+      padding-left: 25px;
+      margin-top: 15px;
+      color: var(--color-grey-2);
+      line-height: 1;
+      &:after {
+        content: '';
+        width: 31px;
+        height: 27px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url("../img/error-1.png") no-repeat;
+      }
     }
   }
 

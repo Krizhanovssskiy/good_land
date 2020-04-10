@@ -56,6 +56,24 @@
   }
 })();
 
+(function () {
+  const openBtnPopUpPhoto = document.querySelector('#ShowRules');
+  const closeBtnPopUpPhoto = document.querySelector('.Btn__close');
+  const popUp = document.querySelector('.RulesPopup');
+
+  if (openBtnPopUpPhoto && closeBtnPopUpPhoto) {
+
+    openBtnPopUpPhoto.addEventListener('click', openPopUp)
+    closeBtnPopUpPhoto.addEventListener('click', closePopUp)
+    function openPopUp() {
+      popUp.classList.add('PopUp__show')
+    }
+    function closePopUp() {
+      popUp.classList.remove('PopUp__show')
+    }
+  }
+})();
+
 
 
 
