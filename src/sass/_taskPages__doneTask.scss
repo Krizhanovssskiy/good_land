@@ -1,0 +1,67 @@
+.DoneTask {
+  padding: 20px 0;
+  display: flex;
+  flex-grow: 3;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 3;
+  }
+  h3, .Btn__checkbox {
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-40);
+    line-height: 48px;
+
+    color: var(--color-black);
+
+  }
+
+  &__buttons {
+    margin-top: 60px;
+    display: flex;
+    .Btn__border-black {
+      padding: 15px 30px;
+      border: 1px solid var(--color-black);
+      margin-right: 20px;
+    }
+  }
+
+  .Btn__checkbox {
+    margin-top: 50px;
+    .textUnderTitle {
+      margin-left: 60px;
+      opacity: 0.3;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+    }
+    input[type=checkbox] + label:before {
+      font-size: 28px;
+      line-height: 27px;
+      height: 30px;
+      width: 30px;
+      margin-right: 30px;
+    }
+
+    img {
+      margin-left: 3px;
+      margin-top: -5px;
+      margin-bottom: -10px;
+    }
+
+    div:nth-child(2) {
+      img {
+        margin-top: -65px;
+      }
+    }
+
+  }
+}
