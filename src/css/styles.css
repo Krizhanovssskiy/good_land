@@ -3,6 +3,8 @@
   --color-logo-task: #76fa95;
   --color-secondary: #78FA9C;
   --color-green: #4FF97E;
+  --color-green-1: #0B9A08;
+  --color-red:#FF0000;
   --color-bg-task: #EFEFEF;
   --color-white: #ffffff;
   --color-black: #000000;
@@ -12,6 +14,7 @@
   --color-grey-0: #E0E0E0;
   --color-grey-1: #666666;
   --color-grey-2: #999999;
+  --color-grey-3: #cccccc;
   --color-grey-dark: #c5c5c5;
   --color-grey-dark-0: #7e7a7f;
   --color-transparent: transparent;
@@ -164,6 +167,11 @@ body, #root {
   /* or 30px */
   color: var(--color-white); }
 
+.textShowRules {
+  color: var(--color-black);
+  text-decoration: underline;
+  cursor: pointer; }
+
 .bg-01service {
   min-width: 79px;
   min-height: 79px;
@@ -267,6 +275,31 @@ body, #root {
   letter-spacing: 0.06em;
   color: var(--color-secondary);
   cursor: pointer; }
+
+.Btn__border-black {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px;
+  border: 2px solid #000000;
+  background: transparent;
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: 800;
+  font-size: var(--text-size-12);
+  line-height: 14px;
+  /* identical to box height, or 117% */
+  letter-spacing: 0.05em;
+  color: var(--color-grey-1); }
 
 .Btn__transparent {
   background: transparent;
@@ -389,6 +422,50 @@ body, #root {
     opacity: 0; }
   .Btn__radio input[type="radio"]:checked + label:after {
     opacity: 1; }
+
+.Btn__checkbox {
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--text-size-16);
+  line-height: 19px;
+  color: var(--color-black); }
+  .Btn__checkbox input[type=checkbox] {
+    display: none; }
+  .Btn__checkbox input[type=checkbox] + label:before {
+    content: "\2714";
+    color: var(--color-transparent);
+    display: inline-block;
+    border: 1px solid var(--color-black);
+    font-size: 18px;
+    line-height: 18px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: color ease .3s;
+    -o-transition: color ease .3s;
+    transition: color ease .3s; }
+  .Btn__checkbox input[type=checkbox]:checked + label:before {
+    color: var(--color-black); }
+
+.Btn__okError {
+  width: 224px;
+  height: 43px;
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: 800;
+  font-size: var(--text-size-12);
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer; }
+  .Btn__okError-ok {
+    color: var(--color-green-1); }
+  .Btn__okError-error {
+    color: var(--color-red); }
 
 .Welcome {
   position: relative;
@@ -849,8 +926,6 @@ body, #root {
             align-items: baseline; }
     .PopUp__complainAboutPhoto h4 {
       margin-bottom: 20px; }
-    .PopUp__complainAboutPhoto textarea {
-      margin-bottom: 15px; }
     .PopUp__complainAboutPhoto .Btn__popUp-btn {
       padding: 15px 25px;
       text-transform: uppercase; }
@@ -866,6 +941,7 @@ body, #root {
   .PopUp textarea {
     width: 100%;
     height: 179px;
+    margin-bottom: 15px;
     padding: 20px;
     font-family: var(--font-secondari);
     font-style: normal;
@@ -1214,9 +1290,6 @@ body, #root {
     line-height: 47px;
     /* identical to box height */
     color: var(--color-black); }
-  .StartedTheTask .textUnderTitle span {
-    text-decoration: underline;
-    cursor: pointer; }
   .StartedTheTask__imgBox-item {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1269,6 +1342,7 @@ body, #root {
           align-items: start; }
 
 .RulesPopup .Btn__close {
+  top: 25px;
   width: 20px;
   height: 20px;
   opacity: 0.4; }
@@ -1320,8 +1394,7 @@ body, #root {
       display: -ms-flexbox;
       display: flex; }
   .TaskPerformance__content {
-    max-width: 200px;
-    margin-top: 50px;
+    max-width: 240px;
     margin-left: 30px;
     display: -webkit-box;
     display: -webkit-flex;
@@ -1344,14 +1417,15 @@ body, #root {
       font-size: var(--text-size-20);
       line-height: 25px;
       color: var(--color-black); }
-    .TaskPerformance__content p {
-      font-family: var(--font-secondari);
-      font-style: normal;
-      font-weight: normal;
-      font-size: var(--text-size-15);
-      line-height: 140%;
-      /* or 22px */
-      color: var(--color-black); }
+  .TaskPerformance__text-middle {
+    margin-bottom: 15px;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-15);
+    line-height: 140%;
+    /* or 22px */
+    color: var(--color-black); }
   .TaskPerformance__buttons {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1364,8 +1438,30 @@ body, #root {
             flex-direction: column; }
     .TaskPerformance__buttons .Btn__radio {
       margin-bottom: 50px; }
+      .TaskPerformance__buttons .Btn__radio .TaskPerformance__text-middle {
+        font-weight: bold; }
       .TaskPerformance__buttons .Btn__radio div {
         margin-bottom: 10px; }
+      .TaskPerformance__buttons .Btn__radio textarea {
+        width: 100%;
+        max-width: 240px;
+        height: 75px;
+        padding: 10px;
+        background: var(--color-white);
+        border: 1px solid var(--color-grey-3);
+        resize: none;
+        text-align: start;
+        font-family: var(--font-secondari);
+        font-style: normal;
+        font-weight: normal;
+        font-size: var(--text-size-14);
+        line-height: 17px;
+        /* identical to box height */
+        color: #999999; }
+    .TaskPerformance__buttons .Btn__checkbox {
+      margin-bottom: 30px; }
+    .TaskPerformance__buttons .Btn__okError-ok {
+      margin-bottom: 10px; }
   .TaskPerformance .Btn__start {
     color: var(--color-white); }
   .TaskPerformance .Btn__transparent {

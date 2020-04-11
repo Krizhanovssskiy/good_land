@@ -22,8 +22,7 @@
   }
 
   &__content {
-    max-width: 200px;
-    margin-top: 50px;
+    max-width: 240px;
     margin-left: 30px;
     display: flex;
     flex-direction: column;
@@ -39,17 +38,17 @@
 
       color: var(--color-black);
     }
+  }
+  &__text-middle {
+    margin-bottom: 15px;
+    font-family: var(--font-secondari);
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--text-size-15);
+    line-height: 140%;
+    /* or 22px */
 
-    p {
-      font-family: var(--font-secondari);
-      font-style: normal;
-      font-weight: normal;
-      font-size: var(--text-size-15);
-      line-height: 140%;
-      /* or 22px */
-
-      color: var(--color-black);
-    }
+    color: var(--color-black);
   }
 
   &__buttons {
@@ -57,14 +56,42 @@
     flex-direction: column;
 
     .Btn__radio {
+      margin-bottom: 50px;
+      .TaskPerformance__text-middle {
+        font-weight: bold;
+      }
       div {
         margin-bottom: 10px;
       }
 
-      margin-bottom: 50px;
+      textarea {
+        width: 100%;
+        max-width: 240px;
+        height: 75px;
+        padding: 10px;
+        background: var(--color-white);
+        border: 1px solid var(--color-grey-3);
+        resize: none;
+        text-align: start;
+
+        font-family: var(--font-secondari);
+        font-style: normal;
+        font-weight: normal;
+        font-size: var(--text-size-14);
+        line-height: 17px;
+        /* identical to box height */
+
+
+        color: #999999;
+      }
     }
 
-
+    .Btn__checkbox {
+      margin-bottom: 30px;
+    }
+    .Btn__okError-ok {
+      margin-bottom: 10px;
+    }
   }
 
   .Btn__start {

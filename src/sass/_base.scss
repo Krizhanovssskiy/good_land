@@ -112,6 +112,18 @@ body, #root {
 
   color: var(--color-white);
 }
+
+.textShowRules {
+  //font-family: var(--font-secondari);
+  //font-style: normal;
+  //font-weight: normal;
+  //font-size: var(--text-size-20);
+  //line-height: 150%;
+
+  color: var(--color-black);
+  text-decoration: underline;
+  cursor: pointer;
+}
 //.//////////////////////////////////////
 
 .bg-01service {

@@ -57,7 +57,7 @@
 })();
 
 (function () {
-  const openBtnPopUpPhoto = document.querySelector('#ShowRules');
+  const openBtnPopUpPhoto = document.querySelector('.textShowRules');
   const closeBtnPopUpPhoto = document.querySelector('.Btn__close');
   const popUp = document.querySelector('.RulesPopup');
 
