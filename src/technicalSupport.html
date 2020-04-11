@@ -11,24 +11,8 @@
 </head>
 <body>
 
-    <div class="PopUp Enrollment">
-    <div class="PopUp__box PopUp__enrollmentSuccessful">
-        <div class="Btn__close">
-            <span class="Btn__close-left"></span>
-            <span class="Btn__close-right"></span>
-        </div>
-
-        <h4>
-            Зачисление проведено успешно
-        </h4>
-        <button class="Btn__popUp-btn">
-            ПРОДОЛЖИТЬ
-        </button>
-    </div>
-</div>
-
-    <header class="HeaderTaskPage">
-        <div class="container">
+<header class="HeaderTaskPage">
+    <div class="container">
         <div class="HeaderTaskPage__left">
             <a href="#" class="logo">
                 <img src="./img/logoGreen.png" alt="good land">
@@ -62,24 +46,33 @@
         </div>
 
     </div>
-    </header>
-    <section class="Help">
-        <div class="container">
-            <h3 class="titleSectionTaskPages">
-                Помощь
-            </h3>
-            <p class="textUnderTitle">
-                Если вам требуется помощь
-                <br>пишите на почту <span>mail@mail.ru</span>
-                <br>и мы ответим и постараемся помощь
-            </p>
-            <a href="main.html" class="Btn__borderTransparent">
-                Назад
-            </a>
-        </div>
-    </section>
+</header>
 
-    <script src="js/index.js"></script>
+<section class="TechnicalSupport">
+    <div class="container">
+        <h3 class="titleSectionTaskPages">
+            Написать в тех.поддержку
+        </h3>
+        <form>
+            <label for="email">E-mail</label>
+            <input type="email" id="email">
+
+            <label for="textarea">
+                Сообщение
+            </label>
+            <textarea id="textarea"></textarea>
+            
+            <div class="TechnicalSupport__buttonsBox">
+                <button class="Btn__borderTransparent">
+                    НАЗАД
+                </button>
+                <button class="Btn__borderBgBlack">
+                    ОТПРАВИТЬ
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
 
 </body>
 </html>

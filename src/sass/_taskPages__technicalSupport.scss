@@ -1,0 +1,56 @@
+@import 'mixins';
+
+.TechnicalSupport {
+  display: flex;
+  flex-grow: 3;
+  padding: 70px 0 40px;
+  background: var(--color-white);
+
+  .container {
+    @include centering-children;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  form {
+    margin-top: 45px;
+    label {
+      margin-bottom: 5px;
+    }
+    label, input, textarea {
+      display: block;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: normal;
+      font-size: var(--text-size-13);
+      line-height: 20px;
+      color: var(--color-black);
+    }
+    input, textarea {
+      width: 450px;
+      padding: 10px;
+    }
+
+    input {
+      height: 45px;
+      margin-bottom: 20px;
+    }
+    textarea {
+      height: 200px;
+      resize: none;
+    }
+  }
+
+  &__buttonsBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .Btn__borderTransparent, .Btn__borderBgBlack {
+    font-weight: bold;
+    font-size: var(--text-size-12);
+    line-height: 14px;
+  }
+}

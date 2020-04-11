@@ -332,6 +332,31 @@ body, #root {
   color: var(--color-black);
   cursor: pointer; }
 
+.Btn__borderBgBlack {
+  width: 197px;
+  height: 45px;
+  border: 1px solid var(--color-black);
+  font-family: var(--font-secondari);
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--text-size-14);
+  line-height: 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer; }
+
 .Btn__back {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1680,6 +1705,7 @@ body, #root {
     font-size: var(--text-size-14);
     line-height: 17px;
     text-align: right;
+    border-collapse: collapse;
     color: var(--color-black); }
     .Settings__table-textLight {
       opacity: 0.3; }
@@ -1790,5 +1816,75 @@ body, #root {
       margin-bottom: -10px; }
     .DoneTask .Btn__checkbox div:nth-child(2) img {
       margin-top: -65px; }
+
+.TechnicalSupport {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+  padding: 70px 0 40px;
+  background: var(--color-white); }
+  .TechnicalSupport .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .TechnicalSupport form {
+    margin-top: 45px; }
+    .TechnicalSupport form label {
+      margin-bottom: 5px; }
+    .TechnicalSupport form label, .TechnicalSupport form input, .TechnicalSupport form textarea {
+      display: block;
+      font-family: var(--font-secondari);
+      font-style: normal;
+      font-weight: normal;
+      font-size: var(--text-size-13);
+      line-height: 20px;
+      color: var(--color-black); }
+    .TechnicalSupport form input, .TechnicalSupport form textarea {
+      width: 450px;
+      padding: 10px; }
+    .TechnicalSupport form input {
+      height: 45px;
+      margin-bottom: 20px; }
+    .TechnicalSupport form textarea {
+      height: 200px;
+      resize: none; }
+  .TechnicalSupport__buttonsBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 20px; }
+  .TechnicalSupport .Btn__borderTransparent, .TechnicalSupport .Btn__borderBgBlack {
+    font-weight: bold;
+    font-size: var(--text-size-12);
+    line-height: 14px; }
 
 /*# sourceMappingURL=styles.css.map */
