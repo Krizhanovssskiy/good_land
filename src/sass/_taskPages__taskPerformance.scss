@@ -38,8 +38,13 @@
 
       color: var(--color-black);
     }
+
+    .TaskPerformance__title {
+      margin-bottom: 0;
+    }
   }
   &__text-middle {
+    margin-top: 10px;
     margin-bottom: 15px;
     font-family: var(--font-secondari);
     font-style: normal;
@@ -56,7 +61,7 @@
     flex-direction: column;
 
     .Btn__radio {
-      margin-bottom: 50px;
+      margin-bottom: 15px;
       .TaskPerformance__text-middle {
         font-weight: bold;
       }
